@@ -1,1 +1,24 @@
+SQL TOPICS 
+SQL(Structured Query Language):-> The sql is used to store,retrieve,update and manage data in a relational database
+SYNTAX:->SELECT COLUMN_NAME FROM TABLE_NAME
+EXAMPLE->SELECT * FROM EMPLOYEE;
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DBMS VS RDBMS
+DBMS:
+1)DBMS(Database Management System) is used to store data in file
+2)no relationships is used
+3)slower
+RDBMS:
+1)RDBMS(Relational Database Management System) is used to store data in tables
+2)RDBMS uses table with relationship using keys.
+3)Faster
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Table,Row,Column:
+1)Table:->It is used to store collection of datas in rows and columns.
+2)Rows:-> It is a one complete record in a table.
+3)Columns:-> It is a one attribute of the data.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 
