@@ -126,3 +126,89 @@ Q2️⃣1️⃣ Display unique customer ages, sorted in descending order. ------
 
 Q2️⃣2️⃣ Display first 2 pending shippings.                   -------------> select * from Shippings where status ='Pending' order by shipping_id limit 2;
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🔹 AGGREGATE FUNCTIONS
+Q1️⃣
+
+Count the total number of customers.
+
+Q2️⃣
+
+Find the total amount of all orders.
+
+Q3️⃣
+
+Find the average age of customers.
+
+Q4️⃣
+
+Find the minimum order amount.
+
+Q5️⃣
+
+Find the maximum order amount.
+
+🔹 WHERE + AGGREGATES
+Q6️⃣
+
+Count the number of customers from USA.
+
+Q7️⃣
+
+Find the total order amount for orders where amount is greater than 300.
+
+Q8️⃣
+
+Find the average age of customers from UK.
+
+🔹 IN OPERATOR
+Q9️⃣
+
+Display customers who belong to USA or UK.
+
+Q1️⃣0️⃣
+
+Display orders where item is Keyboard or Mouse.
+
+🔹 BETWEEN OPERATOR
+Q1️⃣1️⃣
+
+Display customers whose age is between 22 and 30.
+
+Q1️⃣2️⃣
+
+Display orders where amount is between 300 and 1000.
+
+🔹 LIKE OPERATOR
+Q1️⃣3️⃣
+
+Display customers whose first_name starts with 'J'.
+
+Q1️⃣4️⃣
+
+Display customers whose last_name ends with 'e'.
+
+🔹 IS NULL
+Q1️⃣5️⃣
+
+Find customers whose age is NULL.
+
+Q1️⃣6️⃣
+
+Find shippings where status is NULL.
+
+🔹 INTERVIEW-FOCUSED TASKS
+Q1️⃣7️⃣
+
+Count total rows using COUNT(*) from Customers.
+
+Q1️⃣8️⃣
+
+Count only non-NULL ages using COUNT(column).
+
+Q1️⃣9️⃣
+
+Find the average order amount but include only orders above 300.
+
+Q2️⃣0️⃣
+
+Find the maximum age among customers from USA and UK.
