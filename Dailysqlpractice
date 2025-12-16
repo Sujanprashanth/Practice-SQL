@@ -26,6 +26,13 @@ CREATE TABLE EMPLOYEE(
       E_ID INT Primary Key,
       E_name varchar(20)
 );
+2)Foreign key:
+A foreign key refers to the primary key of another table.
+Example:
+FOREIGN KEY (E_depid) REFERENCES Department(E_depid)
+3)Candidate key:
+A column that can be a primary key is called Candidate key.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
