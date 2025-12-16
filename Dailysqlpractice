@@ -18,7 +18,14 @@ Table,Row,Column:
 2)Rows:-> It is a one complete record in a table.
 3)Columns:-> It is a one attribute of the data.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+Keys in SQL:
+1)Primary key:
+A primary key is used to identify each record in a table and it cannot be null.
+Example:
+CREATE TABLE EMPLOYEE(
+      E_ID INT Primary Key,
+      E_name varchar(20)
+);
 
 
 
