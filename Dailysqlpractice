@@ -82,7 +82,7 @@ Q2️⃣ Display only first_name and country of all customers.  -------------> s
 
 Q3️⃣ Fetch all records from Orders table.                   -------------> select * from Orders;
 
-Q4️⃣ Display order_id, item, amount from Orders.            -------------> select order_id,item from Orders;
+Q4️⃣ Display order_id, item, amount from Orders.            -------------> select order_id,item,amount from Orders;
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 WHERE (Filtering)
 Q5️⃣ Display customers whose age is greater than 25.        -------------> select * from Customers where age>25;
@@ -108,21 +108,21 @@ Q1️⃣3️⃣ Display customers sorted by age in descending order. -----------
 Q1️⃣4️⃣ Display orders sorted by amount (highest to lowest). -------------> select * from Orders order by amount desc;
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 LIMIT / TOP
-Q1️⃣5️⃣ Display top 3 customers from Customers table.        ------------->
+Q1️⃣5️⃣ Display top 3 customers from Customers table.        -------------> select * from Customers limit 3;
 
-Q1️⃣6️⃣ Display top 2 highest amount orders.                 ------------->
+Q1️⃣6️⃣ Display top 2 highest amount orders.                 -------------> select * from Orders order by amount desc limit 2;
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ALIAS
-Q1️⃣7️⃣ Display first_name as Name and country as Nation.    ------------->
+Q1️⃣7️⃣ Display first_name as Name and country as Nation.    -------------> select first_name as Name ,country as Nation from Customers;
 
-Q1️⃣8️⃣ Display amount as Total_Amount from Orders table.    ------------->
+Q1️⃣8️⃣ Display amount as Total_Amount from Orders table.    -------------> select amount as Total_Amount from Orders;
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 COMBINED PRACTICE (DAY 1 LEVEL)
-Q1️⃣9️⃣ Display customers from UK, sorted by age.            ------------->
+Q1️⃣9️⃣ Display customers from UK, sorted by age.            -------------> select * from Customers where country='UK' order by age desc;
 
-Q2️⃣0️⃣ Display orders with amount greater than 300, sorted by amount. --->
+Q2️⃣0️⃣ Display orders with amount greater than 300, sorted by amount. ---> select * from Orders where amount>300 order by amount asc; 
 
-Q2️⃣1️⃣ Display unique customer ages, sorted in descending order. -------->
+Q2️⃣1️⃣ Display unique customer ages, sorted in descending order. --------> select distinct age from Customers order by age desc;
 
-Q2️⃣2️⃣ Display first 2 pending shippings.                   ------------->
+Q2️⃣2️⃣ Display first 2 pending shippings.                   -------------> select * from Shippings where status ='Pending' order by shipping_id limit 2;
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
