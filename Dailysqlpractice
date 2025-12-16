@@ -127,88 +127,49 @@ Q2️⃣1️⃣ Display unique customer ages, sorted in descending order. ------
 Q2️⃣2️⃣ Display first 2 pending shippings.                   -------------> select * from Shippings where status ='Pending' order by shipping_id limit 2;
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🔹 AGGREGATE FUNCTIONS
-Q1️⃣
+Q1️⃣ Count the total number of customers.                    -------------> select count(*) from Customers;                   
 
-Count the total number of customers.
+Q2️⃣ Find the total amount of all orders.                    -------------> select sum(amount) from Orders
 
-Q2️⃣
+Q3️⃣ Find the average age of customers.                      -------------> select avg(age) from Customers
 
-Find the total amount of all orders.
+Q4️⃣ Find the minimum order amount.                          -------------> select min(amount) from Orders
 
-Q3️⃣
-
-Find the average age of customers.
-
-Q4️⃣
-
-Find the minimum order amount.
-
-Q5️⃣
-
-Find the maximum order amount.
-
+Q5️⃣ Find the maximum order amount.                          -------------> select max(amount) from Orders
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🔹 WHERE + AGGREGATES
-Q6️⃣
+Q6️⃣ Count the number of customers from USA.                       -------------> select count(*) from Customers where country = 'USA';
 
-Count the number of customers from USA.
+Q7️⃣ Find the total order amount for orders where amount is greater than 300. --> select sum(amount) from Orders where amount>300;
 
-Q7️⃣
-
-Find the total order amount for orders where amount is greater than 300.
-
-Q8️⃣
-
-Find the average age of customers from UK.
-
+Q8️⃣ Find the average age of customers from UK.                    -------------> select avg(age) from Customers where country='UK';
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🔹 IN OPERATOR
-Q9️⃣
+Q9️⃣ Display customers who belong to USA or UK.                    -------------> select * from Customers where country in ('UK','USA');
 
-Display customers who belong to USA or UK.
-
-Q1️⃣0️⃣
-
-Display orders where item is Keyboard or Mouse.
-
+Q1️⃣0️⃣ Display orders where item is Keyboard or Mouse.             -------------> select * from Orders where item in ('Keyboard','Mouse');
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🔹 BETWEEN OPERATOR
-Q1️⃣1️⃣
+Q1️⃣1️⃣ Display customers whose age is between 22 and 30.           -------------> select * from Customers where age between 22 and 30;
 
-Display customers whose age is between 22 and 30.
-
-Q1️⃣2️⃣
-
-Display orders where amount is between 300 and 1000.
-
+Q1️⃣2️⃣ Display orders where amount is between 300 and 1000.        -------------> select * from Orders where amount between 300 and 1000;
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🔹 LIKE OPERATOR
-Q1️⃣3️⃣
+Q1️⃣3️⃣ Display customers whose first_name starts with 'J'.         -------------> select * from Customers where first_name like 'J%';
 
-Display customers whose first_name starts with 'J'.
-
-Q1️⃣4️⃣
-
-Display customers whose last_name ends with 'e'.
-
+Q1️⃣4️⃣ Display customers whose last_name ends with 'e'.            -------------> select * from Customers where last_name like '%e';
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🔹 IS NULL
-Q1️⃣5️⃣
+Q1️⃣5️⃣ Find customers whose age is NULL.                           -------------> select * from Customers where age is null;
 
-Find customers whose age is NULL.
-
-Q1️⃣6️⃣
-
-Find shippings where status is NULL.
-
+Q1️⃣6️⃣ Find shippings where status is NULL.                        -------------> select * from Shippings where status is null;
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🔹 INTERVIEW-FOCUSED TASKS
-Q1️⃣7️⃣
+Q1️⃣7️⃣ Count total rows using COUNT(*) from Customers.             -------------> select count(*) from Customers;
 
-Count total rows using COUNT(*) from Customers.
+Q1️⃣8️⃣ Count only non-NULL ages using COUNT(column).               -------------> select count(age) from Customers where age is not null;
+ 
+Q1️⃣9️⃣ Find the average order amount but include only orders above 300. --------> select avg(amount) from Orders where amount>300;
 
-Q1️⃣8️⃣
-
-Count only non-NULL ages using COUNT(column).
-
-Q1️⃣9️⃣
-
-Find the average order amount but include only orders above 300.
-
-Q2️⃣0️⃣
-
-Find the maximum age among customers from USA and UK.
+Q2️⃣0️⃣ Find the maximum age among customers from USA and UK.       -------------> select max(age) from Customers where country in ('USA','UK');
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
