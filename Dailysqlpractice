@@ -193,7 +193,7 @@ Q7️⃣ Display items having total order amount greater than 500.              
 🔹 GROUP BY MULTIPLE COLUMNS
 Q8️⃣ Display country-wise and age-wise customer count.                        -------------> select country,age,count(*) from Customers group by country,age; 
 
-Q9️⃣ Display item-wise and customer-wise order count.                         -------------> select item,customer_id count(*) from Orders group by item,customer_id;
+Q9️⃣ Display item-wise and customer-wise order count.                         -------------> select item,customer_id,count(*) from Orders group by item,customer_id;
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🔹 GROUP BY WITH AGGREGATE FUNCTIONS
 Q🔟 Display customer-wise total order amount.                                -------------> select customer_id,avg(amount) from Orders group by customer_id;
