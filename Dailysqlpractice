@@ -174,39 +174,39 @@ Q1️⃣9️⃣ Find the average order amount but include only orders above 300.
 Q2️⃣0️⃣ Find the maximum age among customers from USA and UK.       -------------> select max(age) from Customers where country in ('USA','UK');
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 BASIC GROUP BY
-Q1️⃣ Display country-wise customer count.
+Q1️⃣ Display country-wise customer count.                                     ------------->
 
-Q2️⃣ Display age-wise customer count.
+Q2️⃣ Display age-wise customer count.                                         ------------->
 
-Q3️⃣ Display item-wise order count.
+Q3️⃣ Display item-wise order count.                                           ------------->
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🔹 GROUP BY WITH WHERE
-Q4️⃣ Count customers from USA and UK, grouped by country.
+Q4️⃣ Count customers from USA and UK, grouped by country.                     ------------->
 
-Q5️⃣ Display order count per item where amount is greater than 300.
+Q5️⃣ Display order count per item where amount is greater than 300.           ------------->
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🔹 GROUP BY WITH HAVING
-Q6️⃣ Display countries having more than 1 customer.
+Q6️⃣ Display countries having more than 1 customer.                           ------------->
 
-Q7️⃣ Display items having total order amount greater than 500.
+Q7️⃣ Display items having total order amount greater than 500.                ------------->
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🔹 GROUP BY MULTIPLE COLUMNS
-Q8️⃣ Display country-wise and age-wise customer count.
+Q8️⃣ Display country-wise and age-wise customer count.                        ------------->
 
-Q9️⃣ Display item-wise and customer-wise order count.
+Q9️⃣ Display item-wise and customer-wise order count.                         ------------->
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🔹 GROUP BY WITH AGGREGATE FUNCTIONS
-Q🔟 Display customer-wise total order amount.
+Q🔟 Display customer-wise total order amount.                                ------------->
 
-Q1️⃣1️⃣ Display country-wise average customer age.
+Q1️⃣1️⃣ Display country-wise average customer age.                             ------------->
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🔹 HAVING (INTERVIEW FOCUS)
-Q1️⃣2️⃣ Display customers whose total order amount is greater than 500.
+Q1️⃣2️⃣ Display customers whose total order amount is greater than 500.         ------------->
 
-Q1️⃣3️⃣ Display items having more than 1 order.
+Q1️⃣3️⃣ Display items having more than 1 order.                                 ------------->
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🔹 WHERE vs HAVING (COMBINED)
-Q1️⃣4️⃣ Display country-wise customer count, only for customers above age 22.
+Q1️⃣4️⃣ Display country-wise customer count, only for customers above age 22.   ------------->
 
-Q1️⃣5️⃣ Display countries having average age greater than 25.
+Q1️⃣5️⃣ Display countries having average age greater than 25.                   ------------->
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
