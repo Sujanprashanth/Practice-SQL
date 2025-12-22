@@ -233,7 +233,7 @@ Q7️⃣ Display pairs of customers from the same country.                      
 Q8️⃣ Display all possible combinations of customers and order items.                     -------------> SELECT c.first_name,o.itemFROM  Customers ccross join Orders o;
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🔹 REAL-WORLD JOIN SCENARIOS
-Q9️⃣ Display customers along with their shipping status.
+Q9️⃣ Display customers along with their shipping status.                                 -------------> SELECT c.customer_id,c.first_name,c.last_name,c.age,c.country,s.statusFROM  Customers cinner join Shippings son c.customer_id=s.customer order by customer_id asc;
 
 Q1️⃣0️⃣ Find customers whose orders are not yet delivered.
 
