@@ -210,3 +210,37 @@ Q1️⃣4️⃣ Display country-wise customer count, only for customers above ag
 
 Q1️⃣5️⃣ Display countries having average age greater than 25.                   -------------> select country from Customers group by country having avg(age)>25; 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🔹 INNER JOIN
+Q1️⃣ Display customer first name, item, and amount for customers who have placed orders.
+
+Q2️⃣ Display all order details along with customer country.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🔹 LEFT JOIN
+Q3️⃣ Display all customers and their orders, including customers with no orders.
+
+Q4️⃣ Find customers who have not placed any orders.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🔹 RIGHT JOIN
+Q5️⃣ Display all orders, including those without matching customer details.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🔹 FULL JOIN
+Q6️⃣ Display all customers and all orders, including unmatched records.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🔹 SELF JOIN
+Q7️⃣ Display pairs of customers from the same country.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🔹 CROSS JOIN
+Q8️⃣ Display all possible combinations of customers and order items.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🔹 REAL-WORLD JOIN SCENARIOS
+Q9️⃣ Display customers along with their shipping status.
+
+Q1️⃣0️⃣ Find customers whose orders are not yet delivered.
+
+Q1️⃣1️⃣ Find orders that do not have any shipping details.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🔹 MULTI-TABLE JOIN (INTERVIEW FAVORITE)
+Q1️⃣2️⃣ Display customer name, item, amount, and shipping status.
+
+Q1️⃣3️⃣ Display total order amount per customer along with shipping status.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
