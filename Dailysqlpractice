@@ -211,9 +211,9 @@ Q1️⃣4️⃣ Display country-wise customer count, only for customers above ag
 Q1️⃣5️⃣ Display countries having average age greater than 25.                   -------------> select country from Customers group by country having avg(age)>25; 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🔹 INNER JOIN
-Q1️⃣ Display customer first name, item, and amount for customers who have placed orders.
+Q1️⃣ Display customer first name, item, and amount for customers who have placed orders. -------------> select c.first_name,o.item,o.amount from Customers c inner join Orders o on c.customer_id=o.customer_id;
 
-Q2️⃣ Display all order details along with customer country.
+Q2️⃣ Display all order details along with customer country.                              -------------> select o.item,o.amount,c.country from Customers c inner join Orders o on c.customer_id=o.customer_id;
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🔹 LEFT JOIN
 Q3️⃣ Display all customers and their orders, including customers with no orders.
