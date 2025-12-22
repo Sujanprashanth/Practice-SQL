@@ -227,10 +227,10 @@ Q5️⃣ Display all orders, including those without matching customer details. 
 Q6️⃣ Display all customers and all orders, including unmatched records.                  -------------> SELECT c.first_name, c.last_name,c.age,c.country,o.item,o.amountFROM  Customers cfull join Orders oon c.customer_id=o.customer_id;
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🔹 SELF JOIN
-Q7️⃣ Display pairs of customers from the same country.
+Q7️⃣ Display pairs of customers from the same country.                                   -------------> SELECT c1.first_name,c2.countryFROM  Customers c1join Customers c2on c1.country=c2.countryand c1.customer_id<>c2.customer_id;
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🔹 CROSS JOIN
-Q8️⃣ Display all possible combinations of customers and order items.
+Q8️⃣ Display all possible combinations of customers and order items.                     -------------> SELECT c.first_name,o.itemFROM  Customers ccross join Orders o;
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🔹 REAL-WORLD JOIN SCENARIOS
 Q9️⃣ Display customers along with their shipping status.
