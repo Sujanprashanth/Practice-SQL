@@ -245,7 +245,7 @@ Q1️⃣2️⃣ Display customer name, item, amount, and shipping status.       
 Q1️⃣3️⃣ Display total order amount per customer along with shipping status.              -------------> SELECT c.customer_id,c.first_name,c.last_name,SUM(o.amount) AS total_order_amount,s.status FROM Customers c INNER JOIN Orders oON c.customer_id = o.customer_id LEFT JOIN Shippings s ON c.customer_id = s.customer GROUP BY c.customer_id,c.first_name,c.last_name,s.status;
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🔹 SUBQUERY:
-🟢 LEVEL 1 TASKS (Single-Value)
+LEVEL 1 TASKS (Single-Value)
 Q1️⃣ select item,amount from Orders where amount>(select avg(amount) from Orders);
 
 Q2️⃣ select item,amount from Orders where amount=(select max(amount) from Orders);
@@ -265,7 +265,6 @@ Q9️⃣ Find orders placed by customers from USA or UK (use subquery).         
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 LEVEL 3 – EXISTS / NOT EXISTS
 (Focus on existence, not values)
-
 Q🔟 Find customers who have at least one order using EXISTS.                              ------------->
 
 Q1️⃣1️⃣ Find customers who have no orders using NOT EXISTS.                                 ------------->
