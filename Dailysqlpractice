@@ -253,9 +253,24 @@ Q2️⃣ select item,amount from Orders where amount=(select max(amount) from Or
 Q3️⃣ select item,amount from Orders where amount=(select min(amount) from Orders);
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 LEVEL 2 TASKS (IN)
-Q4️⃣ 
+Q4️⃣ Find customers who placed orders                                                     -------------> select first_name,last_name from Customers where customer_id in (select customer_id from Orders order by customer_id asc) order by customer_id asc;                                                
 
-Q6️⃣ 
+Q5️⃣ Find customers who did not place orders                                              -------------> select first_name,last_name from Customers where customer_id not in (select customer_id from Orders order by customer_id asc) order by customer_id asc;
 
-Q8️⃣
+Q7️⃣ Find customers who have shipping records.                                            -------------> select first_name,last_name from Customers where customer_id in (select customer from Shippings order by customer asc) order by customer_id asc;
+
+Q8️⃣ Find customers who do not have any shipping records.                                 -------------> select first_name,last_name from Customers where customer_id not in (select customer from Shippings order by customer asc) order by customer_id asc;
+
+Q9️⃣ Find orders placed by customers from USA or UK (use subquery).                       -------------> select order_id,item,amount from Orders where customer_id in(select customer_id from Customers where country in('USA','UK'));
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+LEVEL 3 – EXISTS / NOT EXISTS
+(Focus on existence, not values)
+
+Q🔟 Find customers who have at least one order using EXISTS.                              ------------->
+
+Q1️⃣1️⃣ Find customers who have no orders using NOT EXISTS.                                 ------------->
+
+Q1️⃣2️⃣ Find customers who have shipping details using EXISTS.                              ------------->
+
+Q1️⃣3️⃣ Find customers who do not have shipping details using NOT EXISTS.                   ------------->
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
