@@ -327,7 +327,7 @@ LEVEL 4 – CORRELATED SUBQUERIES (MOST IMPORTANT)
 INTERVIEW SCENARIOS (LOGIC CHECK)
 1️⃣7️⃣ Find customers who placed more orders than the average number of orders per customer.                          -------------> select c.customer_id,c.first_name,c.last_name,c.age,c.country,count(o.order_id) as total_orders from Customers c join Orders o on o.customer_id=c.customer_id group by c.customer_id, c.first_name, c.last_name, c.age, c.country having count(o.order_id)>(select avg(order_count) from (select count(*) as order_count from Orders group by customer_id));
 
-1️⃣8️⃣ Find customers whose total order amount is greater than the average total order amount.                        ------------->
+1️⃣8️⃣ Find customers whose total order amount is greater than the average total order amount.                        -------------> select c.customer_id,c.first_name,c.last_name,o.amount as total_order_amount from Customers c join Orders o on o.customer_id=c.customer_id where o.amount>(select avg(sumoforders) from(select sum(amount) as sumofordersfrom Orders group by customer_id));
 
 1️⃣9️⃣ Find customers who placed orders but do not have shipping status.                                              ------------->
 
