@@ -333,3 +333,13 @@ INTERVIEW SCENARIOS (LOGIC CHECK)
 
 2️⃣0️⃣ Find customers whose latest order amount is greater than their first order amount.                             ------------->
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+BASIC LEVEL
+1️⃣ Find customers who placed at least one order.                                                                    -------------> select * from Customers c where exists (select customer_id from Orders o where c.customer_id=o.customer_id);  
+
+2️⃣ Find customers who did not place any orders.                                                                     -------------> select * from Customers c where not exists (select customer_id from Orders o where c.customer_id=o.customer_id); 
+
+3️⃣ Find orders whose amount is greater than the average order amount.                                               ------------->
+
+4️⃣ Find the order with the maximum amount.                                                                          ------------->
+
+5️⃣ Find customers who have more than one order.                                                                     ------------->
