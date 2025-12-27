@@ -338,8 +338,19 @@ BASIC LEVEL
 
 2️⃣ Find customers who did not place any orders.                                                                     -------------> select * from Customers c where not exists (select customer_id from Orders o where c.customer_id=o.customer_id); 
 
-3️⃣ Find orders whose amount is greater than the average order amount.                                               ------------->
+3️⃣ Find orders whose amount is greater than the average order amount.                                               -------------> select * from Orders where amount > (select avg(amount) from Orders);
 
-4️⃣ Find the order with the maximum amount.                                                                          ------------->
+4️⃣ Find the order with the maximum amount.                                                                          -------------> select * from Orders where amount = (select max(amount) from Orders);
 
-5️⃣ Find customers who have more than one order.                                                                     ------------->
+5️⃣ Find customers who have more than one order.                                                                     -------------> SELECT c.customer_id,c.first_name,c.last_name,COUNT(o.order_id) AS total_orders FROM Customers c JOIN Orders o ON o.customer_id = c.customer_id GROUP BY c.customer_id,c.first_name,c.last_name HAVING COUNT(o.order_id) > 1;
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+INTERMEDIATE LEVEL
+6️⃣ Find customers whose total order amount is greater than the average total order amount.                          -------------> select c.customer_id,c.first_name,c.last_name,o.amount from Customers c join Orders o on o.customer_id=c.customer_id where o.amount>(select avg(sumoforders) from (select sum(amount) as sumoforders from Orders group by customer_id));
+
+7️⃣ Find customers who placed orders above the average order amount of all orders.
+
+8️⃣ Find customers who placed orders but do not have any shipping status.
+
+9️⃣ Find customers who have shipping records but no orders.
+
+🔟 Find customers whose order amount equals the maximum order amount.
