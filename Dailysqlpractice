@@ -351,6 +351,6 @@ INTERMEDIATE LEVEL
 
 8️⃣ Find customers who placed orders but do not have any shipping status.                                            -------------> select * from Customers c inner join Orders o on o.customer_id=c.customer_id left join Shippings s on s.customer = o.customer_idwhere status is null;
 
-9️⃣ Find customers who have shipping records but no orders.
+9️⃣ Find customers who have shipping records but no orders.                                                          -------------> select * from Customers c inner join Shippings s on s.customer=c.customer_id left join Orders o on o.customer_id = s.customer where o.order_id is null;
 
-🔟 Find customers whose order amount equals the maximum order amount.
+🔟 Find customers whose order amount equals the maximum order amount.                                               -------------> select c.customer_id,c.first_name,c.last_name from Customers c join Orders o on o.customer_id=c.customer_id where o.amount=(select max(amount) from Orders);
