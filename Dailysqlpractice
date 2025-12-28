@@ -347,9 +347,9 @@ BASIC LEVEL
 INTERMEDIATE LEVEL
 6️⃣ Find customers whose total order amount is greater than the average total order amount.                          -------------> select c.customer_id,c.first_name,c.last_name,o.amount from Customers c join Orders o on o.customer_id=c.customer_id where o.amount>(select avg(sumoforders) from (select sum(amount) as sumoforders from Orders group by customer_id));
 
-7️⃣ Find customers who placed orders above the average order amount of all orders.
+7️⃣ Find customers who placed orders above the average order amount of all orders.                                   -------------> select c.customer_id,c.first_name,c.last_name from Customers c join Orders o on o.customer_id=c.customer_id where o.amount>(select avg(amount) from Orders);
 
-8️⃣ Find customers who placed orders but do not have any shipping status.
+8️⃣ Find customers who placed orders but do not have any shipping status.                                            -------------> select * from Customers c inner join Orders o on o.customer_id=c.customer_id left join Shippings s on s.customer = o.customer_idwhere status is null;
 
 9️⃣ Find customers who have shipping records but no orders.
 
