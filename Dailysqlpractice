@@ -329,7 +329,7 @@ INTERVIEW SCENARIOS (LOGIC CHECK)
 
 1️⃣8️⃣ Find customers whose total order amount is greater than the average total order amount.                        -------------> select c.customer_id,c.first_name,c.last_name,o.amount as total_order_amount from Customers c join Orders o on o.customer_id=c.customer_id where o.amount>(select avg(sumoforders) from(select sum(amount) as sumofordersfrom Orders group by customer_id));
 
-1️⃣9️⃣ Find customers who placed orders but do not have shipping status.                                              ------------->
+1️⃣9️⃣ Find customers who placed orders but do not have shipping status.                                              -------------> select * from Customers c inner join Orders o on o.customer_id=c.customer_id left join Shippings s on s.customer = o.customer_id where status is null;
 
 2️⃣0️⃣ Find customers whose latest order amount is greater than their first order amount.                             ------------->
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
