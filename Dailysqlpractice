@@ -354,3 +354,15 @@ INTERMEDIATE LEVEL
 9️⃣ Find customers who have shipping records but no orders.                                                          -------------> select * from Customers c inner join Shippings s on s.customer=c.customer_id left join Orders o on o.customer_id = s.customer where o.order_id is null;
 
 🔟 Find customers whose order amount equals the maximum order amount.                                               -------------> select c.customer_id,c.first_name,c.last_name from Customers c join Orders o on o.customer_id=c.customer_id where o.amount=(select max(amount) from Orders);
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ADVANCED LEVEL (LOGIC HEAVY)
+1️⃣1️⃣ Find the highest order amount placed by each customer.
+
+1️⃣2️⃣ Find customers whose order amount is greater than their own average order amount.
+
+1️⃣3️⃣ Find customers whose order amount is equal to the maximum order amount of that customer.
+
+1️⃣4️⃣ Find customers who placed more orders than the average number of orders per customer.
+
+1️⃣5️⃣ Find customers whose total order amount is less than the maximum total order amount among all customers.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
