@@ -356,9 +356,9 @@ INTERMEDIATE LEVEL
 🔟 Find customers whose order amount equals the maximum order amount.                                               -------------> select c.customer_id,c.first_name,c.last_name from Customers c join Orders o on o.customer_id=c.customer_id where o.amount=(select max(amount) from Orders);
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ADVANCED LEVEL (LOGIC HEAVY)
-1️⃣1️⃣ Find the highest order amount placed by each customer.                                                         -------------> select c.customer_id,c.first_name,c.last_name,max(o.amount)from Customers cjoin Orders oon o.customer_id=c.customer_idgroup by o.customer_id,c.first_name,c.last_name
+1️⃣1️⃣ Find the highest order amount placed by each customer.                                                         -------------> select c.customer_id,c.first_name,c.last_name,max(o.amount)from Customers c join Orders o on o.customer_id=c.customer_id group by o.customer_id,c.first_name,c.last_name;
 
-1️⃣2️⃣ Find customers whose order amount is greater than their own average order amount.                              ------------->
+1️⃣2️⃣ Find customers whose order amount is greater than their own average order amount.                              -------------> select c.customer_id,c.first_name,c.last_name,o.amount from Customers c inner join Orders o on o.customer_id=c.customer_id where o.amount>(select avg(o1.amount) from Orders o1 where o1.customer_id=c.customer_id);
 
 1️⃣3️⃣ Find customers whose order amount is equal to the maximum order amount of that customer.                       ------------->
 
