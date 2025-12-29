@@ -360,7 +360,7 @@ ADVANCED LEVEL (LOGIC HEAVY)
 
 1️⃣2️⃣ Find customers whose order amount is greater than their own average order amount.                              -------------> select c.customer_id,c.first_name,c.last_name,o.amount from Customers c inner join Orders o on o.customer_id=c.customer_id where o.amount>(select avg(o1.amount) from Orders o1 where o1.customer_id=c.customer_id);
 
-1️⃣3️⃣ Find customers whose order amount is equal to the maximum order amount of that customer.                       ------------->
+1️⃣3️⃣ Find customers whose order amount is equal to the maximum order amount of that customer.                       -------------> select c.customer_id,c.first_name,c.last_name,o.amount from Customers c join Orders o on o.customer_id=c.customer_id where o.amount =(select max(amount) from Orders o1 where o1.customer_id=c.customer_id);
 
 1️⃣4️⃣ Find customers who placed more orders than the average number of orders per customer.                          ------------->
 
