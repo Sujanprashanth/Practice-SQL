@@ -366,3 +366,31 @@ ADVANCED LEVEL (LOGIC HEAVY)
 
 1️⃣5️⃣ Find customers whose total order amount is less than the maximum total order amount among all customers.       -------------> select c.customer_id,c.first_name,c.last_name,sum(o.amount) as total_amount from Customers c join Orders o on o.customer_id=c.customer_id group by c.customer_id,c.first_name,c.last_name having sum(o.amount)<(select max(t) from (select sum(o1.amount) t from Orders o1 group by customer_id) x);
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Question involving 3 tables
+BASIC LEVEL
+1️⃣ Display customer name, ordered item, order amount, and shipping status.                                                                        ------------->select c.customer_id,c.first_name,c.last_name,o.item,o.amount,s.status from Customers c join Orders o on o.customer_id=c.customer_id left join Shippings s on s.customer=o.customer_id;
+
+2️⃣ Find customers who have placed orders and also have shipping details.                                                                          ------------->
+
+3️⃣ Display all customers along with their orders and shipping status (include customers even if they have no orders or shipping).                 ------------->
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+INTERMEDIATE LEVEL
+4️⃣ Find customers who placed orders but whose shipping status is Pending.                                                                         ------------->
+
+5️⃣ Find customers who placed orders but do not have any shipping details.                                                                         ------------->
+
+6️⃣ Display total order amount per customer along with their shipping status.                                                                      ------------->
+
+7️⃣ Find customers who placed more than one order and whose shipping status is Delivered.                                                          ------------->
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ADVANCED / INTERVIEW LEVEL
+8️⃣ Find customers whose total order amount is greater than the average total order amount of all customers and show their shipping status.        ------------->
+
+9️⃣ Find customers who have placed orders but have no Delivered shipping.
+
+🔟 Find customers whose latest order amount is greater than their shipping-related order amount.
+
+1️⃣1️⃣ Find customers who placed orders only once and whose shipping status is Pending.
+
+1️⃣2️⃣ Find customers who have orders and shipping records but shipping status is missing or NULL.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
