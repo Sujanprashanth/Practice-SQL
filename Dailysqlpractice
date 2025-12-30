@@ -386,11 +386,11 @@ INTERMEDIATE LEVEL
 ADVANCED / INTERVIEW LEVEL
 8️⃣ Find customers whose total order amount is greater than the average total order amount of all customers and show their shipping status.        ------------->
 
-9️⃣ Find customers who have placed orders but have no Delivered shipping.
+9️⃣ Find customers who have placed orders but have no Delivered shipping.                                                                          ------------->
 
-🔟 Find customers whose latest order amount is greater than their shipping-related order amount.
+🔟 Find customers whose latest order amount is greater than their shipping-related order amount.                                                  ------------->
 
-1️⃣1️⃣ Find customers who placed orders only once and whose shipping status is Pending.
+1️⃣1️⃣ Find customers who placed orders only once and whose shipping status is Pending.                                                             ------------->
 
-1️⃣2️⃣ Find customers who have orders and shipping records but shipping status is missing or NULL.
+1️⃣2️⃣ Find customers who have orders and shipping records but shipping status is missing or NULL.                                                  ------------->
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
