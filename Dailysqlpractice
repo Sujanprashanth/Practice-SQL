@@ -394,3 +394,9 @@ ADVANCED / INTERVIEW LEVEL
 
 1️⃣2️⃣ Find customers who have orders and shipping records but shipping status is missing or NULL.                                                  -------------> select * from Customers c join Orders o on o.customer_id=c.customer_id join Shippings s on s.customer=o.customer_idwhere s.status is null
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DAY 6 – CONSTRAINTS + TRANSACTIONS
+Primary key --> It is used to uniquely identify each row in a table.It is a combination of unique and not null.one table can have one primary key.
+Foreign key --> It is used to relate two tables by referencing the primary key in another table.
+Unique      --> It ensures all the values in a table are unique.Allows null.Multiple unique constraints is possible in a table.
+Not null    --> Ensures that the table should not have null values.
+check       --> Restricts a value based on a condition.
