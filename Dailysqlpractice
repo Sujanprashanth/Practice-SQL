@@ -402,14 +402,14 @@ Not null    --> Ensures that the table should not have null values.
 check       --> Restricts a value based on a condition.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Transactions(Data safety)
-Transactions-->
-commit      -->
-rollback    -->
-savepoint   -->
+Transactions--> A group of sql statements executed as a single unit of work.
+commit      --> Any changes made in the transaction is permanent.
+rollback    --> Undos all the changes made in the current transaction and rollback to its previous state. 
+savepoint   --> savepoint allows you to rollback at a specific time without cancelling the entire transaction. 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Acid Properties
-Atomicity   -->
-Consistency -->
-Isolation   -->
-Durability  -->
+Atomicity   --> Atomicity ensures that the transaction should complete or not at all.
+Consistency --> Consistency ensures that the transaction remains in a valid state.
+Isolation   --> Isolation ensures each transaction should be independent to one another.
+Durability  --> Durability ensures that the data should not be lost even if there is a system crash
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
