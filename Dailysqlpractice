@@ -413,3 +413,15 @@ Consistency --> Consistency ensures that the transaction remains in a valid stat
 Isolation   --> Isolation ensures each transaction should be independent to one another.
 Durability  --> Durability ensures that the data should not be lost even if there is a system crash
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL DATABASES
+create database(Used to create a database)                   
+     SQL QUERY TO CREATE A DATABASE           --------> create database database_name
+drop database(Used to delete a database)                     
+     SQL QUERY TO DROP A DATABASE             --------> drop database database_name
+Alter table(Used to modify,add,delete a column in a table)    
+     SQL QUERY TO ADD A COLUMN                --------> ALTER TABLE TABLE_NAME ADD COLUMN_NAME DATATYPE
+     SQL QUERY TO DROP A COLUMN               --------> ALTER TABLE TABLE_NAME DROP COLUMN COLUMN_NAME
+     SQL QUERY TO MODIFY A COLUMN NAME        --------> ALTER TABLE TABLE_NAME RENAME COLUMN OLD_COLUMN_NAME TO NEW_COLUMN_NAME
+     SQL QUERY TO MODIFY A COLUMN DATATYPE    --------> ALTER TABLE TABLE_NAME ALTER COLUMN COLUMN_NAME DATATYPE
+SQL NOT NULL
+     
